@@ -1,0 +1,71 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<head>
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/bg.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron h3,h4{
+      text-align: center;
+    }
+
+
+    .alert {
+      margin: 0px;
+    }
+
+  .display-3.glow{
+    font-weight: 400;
+    color: black;
+    margin-bottom: 50px;
+  }
+  .book{
+    font-size: xx-large;
+    color: black;
+    margin-bottom: 30px;
+  }
+  .btn-custom {
+    display: inline-block;
+  padding: 6px 12px;
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+  }
+  </style>
+</head>
+<br>
+<br>
+
+<div class="jumbotron">
+  <br>
+  <h4 class="display-3 glow">HEALTHCARE AT IT'S BEST</h4>
+  <br>
+  <h4 class="book">BOOK AN APPOINTMENT</h4>
+
+  <p class="lead">
+    <a class="btn btn-custom btn-lg" href="/patientclick" role="button">CLICK HERE</a>
+  </p>
+  <br><br>
+</div>
+
+<br><br><br><br>
+
+{% include "hospital/admin_doctor_patient_card.html" %}
+<br><br><br>
+
+{% endblock content %}
